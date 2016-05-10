@@ -46,5 +46,8 @@ Yes, the plugin has two filters that allow you to modify the output (rrssb_for_w
 2. RRSSB for WP Settings
 
 == Changelog ==
+= 1.0.1 =
+* Fix twitter popup and description text.
+
 = 1.0 =
 * First version
