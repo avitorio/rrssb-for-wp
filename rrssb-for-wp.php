@@ -9,7 +9,7 @@
  * that starts the plugin.
  *
  * @link              http://www.codigitus.com
- * @since             1.0.0
+ * @since             1.0
  * @package           Rrssb_For_Wp
  *
  * @wordpress-plugin
