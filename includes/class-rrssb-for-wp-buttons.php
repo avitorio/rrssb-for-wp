@@ -44,7 +44,7 @@ class Rrssb_For_Wp_Buttons {
 	}
 
 	private function make_button( $button ) {
-		$is_popup        = array( 'facebook', 'linkedin', 'twitter', 'vk', 'googleplus' );
+		$is_popup        = array( 'facebook', 'linkedin', 'vk', 'googleplus' );
 		$button_template = '<li class="rrssb-' . $button . '"><a href="#"' . ( in_array( $button, $is_popup ) ? ' class="popup">' : '>' );
 		$button_template .= $this->button_icon( $button );
 		switch ( $button ) {

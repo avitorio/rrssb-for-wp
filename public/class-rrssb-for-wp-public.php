@@ -87,8 +87,9 @@ class Rrssb_For_Wp_Public {
 			wp_enqueue_script( $this->plugin_name . '-buttons', plugin_dir_url( __FILE__ ) . 'js/rrssb.min.js', array( 'jquery' ), $this->version, false );
 
 			$data = array(
-				'title' => urlencode($post->post_title),
-				'url'   => get_permalink()
+				'title' => $post->post_title,
+				'url'   => get_permalink(),
+				'description' => $post->post_title
 			);
 
 			wp_localize_script( $this->plugin_name, 'rrssb_vars', $data );
