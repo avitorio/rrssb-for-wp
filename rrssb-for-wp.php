@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              http://www.codigitus.com
- * @since             1.0
+ * @since             1.0.0
  * @package           Rrssb_For_Wp
  *
  * @wordpress-plugin
  * Plugin Name:       Ridiculously Responsive Social Sharing Buttons for WP
  * Plugin URI:        http://www.codigitus.com/portfolio/rrssb-for-wp/
  * Description:       Responsive social sharing buttons for WordPress. Based on <a href="http://kurtnoble.com/labs/rrssb">http://kurtnoble.com/labs/rrssb</a>
- * Version:           1.0.0
+ * Version:           1.0
  * Author:            Fede Gómez
  * Author URI:        http://www.codigitus.com
  * License:           GPL-2.0+
