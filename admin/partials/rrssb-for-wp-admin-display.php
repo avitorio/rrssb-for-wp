@@ -48,8 +48,13 @@
 					<fieldset>
 						<legend class="screen-reader-text"><span><?php _e('Mostrar botones en',$this->plugin_name); ?></span></legend>
 						<?php foreach ( get_post_types( [ 'public' => true ], 'objects' ) as $post_type ) {
-							$is_checked = in_array( $post_type->name, $settings['visibility'] ) ?
-								$post_type->name : 0; ?>
+							if (array_key_exists('visibility', $settings)) {
+								$is_checked = in_array( $post_type->name, $settings['visibility'] ) ?
+								$post_type->name : 0; 
+							} else {
+								$is_checked = 0;
+							}?>
+
 							<label for="<?php echo $post_type->labels->name; ?>">
 								<input name="<?php echo $this->plugin_name; ?>[visibility][<?php echo $post_type->name; ?>]"
 								       type="checkbox"

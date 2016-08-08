@@ -126,15 +126,21 @@ class Rrssb_For_Wp_Admin
      * @return array
      */
     public function validate($input)
-    {
+    {   
         $valid = array();
         $delete_strings = array('rrssb-', ' ui-sortable-handle');
         $clean_buttons = str_replace($delete_strings, '', $input['buttons']);
         $valid['buttons'] = $clean_buttons;
         foreach (get_post_types(['public' => true]) as $post_type) {
-            if ($input['visibility'][$post_type] == 1) {
-                $valid['visibility'][] = $post_type;
+            if (array_key_exists('visibility', $input)) {
+                if (array_key_exists($post_type, $input['visibility'])) {
+                    if ($input['visibility'][$post_type] == 1) {
+                        $valid['visibility'][] = $post_type;
+                    }
+                }
             }
+                
+            
         }
         $valid['show_in'] = $input['show_in'];
         $valid['exclude_ids'] = filter_var($input['exclude_ids'], FILTER_SANITIZE_NUMBER_FLOAT,

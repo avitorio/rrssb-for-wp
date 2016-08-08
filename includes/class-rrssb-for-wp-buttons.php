@@ -165,10 +165,11 @@ class Rrssb_For_Wp_Buttons {
 		$settings = get_option( $plugin_name );
 
 		$exclude_ids = explode( ',', $settings['exclude_ids'] );
-
-		if ( in_array( get_post_type($id), $settings['visibility'] ) && is_singular() && ! in_array( $id,
-				$exclude_ids ) ) {
-			return true;
+		if (array_key_exists('visibility', $settings)) {
+			if ( in_array( get_post_type($id), $settings['visibility'] ) && is_singular() && ! in_array( $id,
+					$exclude_ids ) ) {
+				return true;
+			}
 		}
 		
 		return false;
